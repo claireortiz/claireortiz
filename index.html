@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claire Ortiz | Computer Engineering Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            50: '#e6f8f2',
+                            100: '#c2efe1',
+                            200: '#8de2c8',
+                            300: '#4cd1a7',
+                            400: '#29b987',
+                            500: '#12986c',
+                            600: '#0d7955',
+                            700: '#0a6144',
+                            800: '#0c4e38',
+                            900: '#0a402e',
+                            950: '#061410',
+                        }
+                    },
+                    fontFamily: {
+                        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #061410;
+            color: #D6EAE1;
+        }
+        .code-font {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .glow-box {
+            box-shadow: 0 0 25px -5px rgba(41, 185, 135, 0.15);
+        }
+        .glow-box:hover {
+            box-shadow: 0 0 35px 0px rgba(41, 185, 135, 0.3);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #061410;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #124535;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #29B987;
+        }
+    </style>
+</head>
+<body class="bg-emerald-950 text-emerald-100 min-h-screen selection:bg-emerald-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-emerald-950/80 backdrop-blur-md border-b border-emerald-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="code-font font-bold text-lg text-emerald-400 flex items-center gap-2">
+                <span class="text-emerald-500">&lt;</span>Claire Ortiz<span class="text-emerald-500">/&gt;</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+                <a href="#about" class="hover:text-emerald-400 transition">About</a>
+                <a href="#projects" class="hover:text-emerald-400 transition">Projects</a>
+                <a href="#github-repos" class="hover:text-emerald-400 transition">GitHub Repos</a>
+                <a href="#skills" class="hover:text-emerald-400 transition">Skills</a>
+                <a href="#simulator" class="hover:text-emerald-400 transition">Logic Simulator</a>
+                <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
+            </nav>
+            <div class="flex items-center gap-3">
+                <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" class="p-2 rounded-lg bg-emerald-900/40 border border-emerald-800 text-emerald-300 hover:text-white hover:bg-emerald-800 transition">
+                    <i class="fa-brands fa-github text-lg"></i>
+                </a>
+                <a href="mailto:YOUR_EMAIL" class="p-2 rounded-lg bg-emerald-900/40 border border-emerald-800 text-emerald-300 hover:text-white hover:bg-emerald-800 transition">
+                    <i class="fa-solid fa-envelope text-lg"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden pt-12 pb-16 border-b border-emerald-900/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="rounded-xl overflow-hidden mb-6 shadow-2xl border border-emerald-900/50">
+                <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=230&color=0:061410,45:124535,100:29B987&text=CLAIRE%20ORTIZ&fontColor=FFFFFF&fontSize=52&fontAlignY=38&desc=COMPUTER%20ENGINEERING%20%7C%20TECHNOLOGY%20INNOVATION&descSize=15&descAlignY=59&animation=fadeIn" alt="Claire Ortiz Portfolio Banner"/>
+            </div>
+
+            <div class="my-6">
+                <img class="mx-auto" src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=21&duration=3000&pause=1000&color=3DDC97&center=true&vCenter=true&width=650&lines=Computer+Engineering+Student;Aspiring+Software+Developer;Embedded+Systems+Enthusiast;IoT+%26+Automation+Explorer;Engineering+Ideas+Into+Reality" alt="Animated Introduction"/>
+            </div>
+
+            <div class="flex justify-center gap-4 my-6">
+                <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">
+                    <img src="https://img.shields.io/badge/GITHUB-07120F?style=for-the-badge&logo=github&logoColor=3DDC97" alt="GitHub"/>
+                </a>
+                <a href="YOUR_PORTFOLIO_URL" target="_blank">
+                    <img src="https://img.shields.io/badge/PORTFOLIO-10392F?style=for-the-badge&logo=googlechrome&logoColor=3DDC97" alt="Portfolio"/>
+                </a>
+                <a href="mailto:YOUR_EMAIL">
+                    <img src="https://img.shields.io/badge/CONTACT-07120F?style=for-the-badge&logo=gmail&logoColor=3DDC97" alt="Email"/>
+                </a>
+            </div>
+
+            <p class="code-font text-emerald-400 mt-4 tracking-wide">
+                SOFTWARE DEVELOPMENT • EMBEDDED SYSTEMS • NETWORK ENGINEERING
+            </p>
+            <blockquote class="italic text-emerald-300/80 mt-2">
+                "Designing Solutions. Developing Technology. Engineering the Future."
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-emerald-900/20 border border-emerald-800/50 rounded-2xl p-8 glow-box">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                <i class="fa-solid fa-user-gear text-emerald-400"></i> About Me
+            </h2>
+            <div class="space-y-4 text-emerald-100/90 leading-relaxed">
+                <p>
+                    Hello! I'm <strong class="text-emerald-400">Claire Ortiz</strong>, a passionate Computer Engineering student interested in software development, electronics, computer networking, and emerging technologies.
+                </p>
+                <p>
+                    I enjoy transforming creative ideas into practical solutions by combining programming, hardware development, and engineering principles.
+                </p>
+                <p>
+                    My interests include building interactive applications, developing microcontroller-based prototypes, designing network infrastructures, and exploring innovative technologies that solve real-world problems.
+                </p>
+                <p>
+                    Through continuous learning and hands-on experience, I aim to strengthen my technical expertise and contribute to meaningful engineering projects.
+                </p>
+            </div>
+
+            <div class="mt-8">
+                <h3 class="text-lg font-semibold text-emerald-300 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-compass text-emerald-400"></i> My Areas of Interest
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    <div class="flex items-center gap-2 bg-emerald-950/60 border border-emerald-900/60 p-3 rounded-xl text-sm">
+                        <span class="text-emerald-400">💻</span> Software and Web Development
+                    </div>
+                    <div class="flex items-center gap-2 bg-emerald-950/60 border border-emerald-900/60 p-3 rounded-xl text-sm">
+                        <span class="text-emerald-400">⚡</span> Embedded Systems and Electronics
+                    </div>
+                    <div class="flex items-center gap-2 bg-emerald-950/60 border border-emerald-900/60 p-3 rounded-xl text-sm">
+                        <span class="text-emerald-400">🌐</span> Computer Networking
+                    </div>
+                    <div class="flex items-center gap-2 bg-emerald-950/60 border border-emerald-900/60 p-3 rounded-xl text-sm">
+                        <span class="text-emerald-400">🤖</span> Automation and Intelligent Systems
+                    </div>
+                    <div class="flex items-center gap-2 bg-emerald-950/60 border border-emerald-900/60 p-3 rounded-xl text-sm">
+                        <span class="text-emerald-400">📱</span> Mobile Application Development
+                    </div>
+                    <div class="flex items-center gap-2 bg-emerald-950/60 border border-emerald-900/60 p-3 rounded-xl text-sm">
+                        <span class="text-emerald-400">📡</span> Internet of Things (IoT)
+                    </div>
+                    <div class="flex items-center gap-2 bg-emerald-950/60 border border-emerald-900/60 p-3 rounded-xl text-sm sm:col-span-2 lg:col-span-3">
+                        <span class="text-emerald-400">🔌</span> Hardware and Software Integration
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-emerald-900/40 text-center">
+                <blockquote class="text-emerald-300 italic font-medium">
+                    "Innovation begins with curiosity, grows through learning, and becomes reality through engineering."
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-white mb-3">🚀 Featured Projects</h2>
+            <p class="text-emerald-300/80">A collection of software applications, engineering prototypes, and technical design projects.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Project 1: Vero Scale -->
+            <div class="bg-emerald-900/20 border border-emerald-800/50 rounded-2xl p-6 flex flex-col justify-between glow-box transition hover:-translate-y-1">
+                <div>
+                    <span class="code-font text-xs font-semibold text-emerald-400 bg-emerald-900/40 px-3 py-1 rounded-full border border-emerald-800">01 | Smart IoT System</span>
+                    <h3 class="text-xl font-bold text-white mt-4 mb-2">Vero Scale</h3>
+                    <p class="text-emerald-300 text-sm font-medium mb-3">Smart Food Scale with Built-In Nutrient Analysis</p>
+                    <p class="text-emerald-100/80 text-sm mb-4">
+                        Combines real-time weight measurement up to 5kg via HX711 amplification with automated nutrient database analysis on a 2.4" TFT touchscreen display[cite: 2].
+                    </p>
+                    <ul class="text-xs text-emerald-200 space-y-1 mb-4 list-disc list-inside">
+                        <li>HX711 5kg Load Cell Amplifier[cite: 2]</li>
+                        <li>2.4" TFT LCD Touchscreen (ILI9341)[cite: 2]</li>
+                        <li>MicroSD Card Storage & Buzzer Alerts[cite: 2]</li>
+                        <li>18650 Li-ion battery with TP4056 module[cite: 2]</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="flex flex-wrap gap-1.5 mb-6">
+                        <span class="text-[10px] bg-emerald-950 px-2 py-0.5 rounded text-emerald-300 border border-emerald-900">ESP32</span>
+                        <span class="text-[10px] bg-emerald-950 px-2 py-0.5 rounded text-emerald-300 border border-emerald-900">C++</span>
+                        <span class="text-[10px] bg-emerald-950 px-2 py-0.5 rounded text-emerald-300 border border-emerald-900">HX711</span>
+                        <span class="text-[10px] bg-emerald-950 px-2 py-0.5 rounded text-emerald-300 border border-emerald-900">SPI/I2C</span>
+                    </div>
+                    <button onclick="openProjectModal('Vero Scale', 'Smart Food Scale with Built-In Nutrient Analysis', 'Vero Scale is a smart embedded nutrition tracking device that combines real-time weight measurement with automated nutrient analysis to support diet monitoring and health tracking[cite: 2].\n\nKey Features:\n- Precision load cell interface measuring food weight up to 5 kg using an HX711 amplifier module[cite: 2].\n- Interactive 2.4&#34; TFT LCD touchscreen display (ILI9341 + XPT2046) for clear system navigation[cite: 2].\n- Nutrient database analysis and food record storage utilizing a MicroSD card module[cite: 2].\n- Calorie limit tracking with an integrated buzzer alert mechanism[cite: 2].\n- Portable 18650 Li-ion battery power supply managed via a TP4056 charging module and voltage regulator circuit[cite: 2].', ['ESP32', 'C++', 'HX711', 'Load Cell', 'TFT Touchscreen', 'SPI/I2C', 'Embedded Systems'])" class="w-full py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-sm font-medium transition text-center block">
+                        View Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 2: MediBox -->
+            <div class="bg-emerald-900/20 border border-emerald-800/50 rounded-2xl p-6 flex flex-col justify-between glow-box transition hover:-translate-y-1">
+                <div>
+                    <span class="code-font text-xs font-semibold text-emerald-400 bg-emerald-900/40 px-3 py-1 rounded-full border border-emerald-800">02 | IoT Health Prototype</span>
+                    <h3 class="text-xl font-bold text-white mt-4 mb-2">MediBox</h3>
+                    <p class="text-emerald-300 text-sm font-medium mb-3">Smart Medication Reminder & Status Notification System</p>
+                    <p class="text-emerald-100/80 text-sm mb-4">
+                        An ESP32-powered IoT medication alert system designed to help patients adhere to scheduled prescription regimens through multi-LED visual cues and audio alerts[cite: 1].
+                    </p>
+                    <ul class="text-xs text-emerald-200 space-y-1 mb-4 list-disc list-inside">
+                        <li>Multi-Stage Color-Coded LEDs[cite: 1]</li>
+                        <li>Wi-Fi Status Indicator[cite: 1]</li>
+                        <li>Piezo Buzzer Audio Warnings[cite: 1]</li>
+                        <li>Custom GPIO Pin-Mapped Layout[cite: 1]</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="flex flex-wrap gap-1.5 mb-6">
+                        <span class="text-[10px] bg-emerald-950 px-2 py-0.5 rounded text-emerald-300 border border-emerald-900">ESP32</span>
+                        <span class="text-[10px] bg-emerald-950 px-2 py-0.5 rounded text-emerald-300 border border-emerald-900">C++</span>
+                        <span class="text-[10px] bg-emerald-950 px-2 py-0.5 rounded text-emerald-300 border border-emerald-900">IoT</span>
+                        <span class="text-[10px] bg-emerald-950 px-2 py-0.5 rounded text-emerald-300 border border-emerald-900">Wi-Fi</span>
+                    </div>
+                    <button onclick="openProjectModal('MediBox', 'Smart Medication Reminder & Status Notification System', 'MediBox is an ESP32-powered IoT medication alert system designed to help patients adhere to scheduled prescription regimens through multi-LED visual cues and audio alerts[cite: 1].\n\nKey Features:\n- Multi-stage color-coded LED indicators for power, scheduled medication notices, and Wi-Fi status tracking[cite: 1].\n- Integrated Wi-Fi indicator tied to the ESP32 module for wireless synchronization[cite: 1].\n- Audible piezo buzzer alert system for instant reminder notifications[cite: 1].\n- Clean GPIO pin mapping and layout configured for microcontrollers[cite: 1].', ['ESP32', 'C++', 'IoT', 'Wi-Fi', 'GPIO Control', 'Embedded Electronics'])" class="w-full py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-sm font-medium transition text-center block">
+                        View Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 3: Local Area Network Design -->
+            <div class="bg-emerald-900/20 border border-emerald-800/50 rounded-2xl p-6 flex flex-col justify-between glow-box transition hover:-translate-y-1">
+                <div>
+                    <span class="code-font text-xs font-semibold text-emerald-400 bg-emerald-900/40 px-3 py-1 rounded-full border border-emerald-800">03 | Network Engineering</span>
+                    <h3 class="text-xl font-bold text-white mt-4 mb-2">Local Area Network (LAN) Design</h3>
+                    <p class="text-emerald-300 text-sm font-medium mb-3">Enterprise Building Network & Infrastructure Configuration</p>
+                    <p class="text-emerald-100/80 text-sm mb-4">
+                        Comprehensive multi-floor structured cabling and network infrastructure design for COEPRO14, detailing CAD floor layouts, routing tables, and server architectures[cite: 3].
+                    </p>
+                    <ul class="text-xs text-emerald-200 space-y-1 mb-4 list-disc list-inside">
+                        <li>Multi-floor RJ45 & Switch Blueprints[cite: 3]</li>
+                        <li>Static IP, Subnet & DNS Configurations[cite: 3]</li>
+                        <li>Centralized Server & Firewall Topology[cite: 3]</li>
+                        <li>Windows GUI & netsh CLI Deployment[cite: 3]</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="flex flex-wrap gap-1.5 mb-6">
+                        <span class="text-[10px] bg-emerald-950 px-2 py-0.5 rounded text-emerald-300 border border-emerald-900">Network Architecture</span>
+                        <span class="text-[10px] bg-emerald-950 px-2 py-0.5 rounded text-emerald-300 border border-emerald-900">TCP/IP</span>
+                        <span class="text-[10px] bg-emerald-950 px-2 py-0.5 rounded text-emerald-300 border border-emerald-900">AutoCAD</span>
+                        <span class="text-[10px] bg-emerald-950 px-2 py-0.5 rounded text-emerald-300 border border-emerald-900">DHCP/Static</span>
+                    </div>
+                    <button onclick="openProjectModal('Local Area Network (LAN) Design', 'Enterprise Building Network & Infrastructure Configuration', 'A comprehensive multi-floor structured cabling and network infrastructure design project completed for COEPRO14 (Data Communication), detailing floor layouts, cabling paths, server configurations, and routing architectures[cite: 3].\n\nKey Features:\n- Multi-floor architectural CAD blueprints mapping structured RJ45 cabling, switches, and ceiling access points[cite: 3].\n- Comprehensive Static IP, Subnet Mask, Gateway, and DNS table mappings across multi-floor workstations[cite: 3].\n- Core network layout featuring central routers, redundant switches, firewall protection, and designated server rooms[cite: 3].\n- Step-by-step Windows GUI and Command-Line Interface (netsh CLI) configuration guides for static and dynamic DHCP deployment[cite: 3].', ['Network Architecture', 'TCP/IP', 'DHCP/Static IP', 'AutoCAD', 'Subnetting', 'Firewall Configuration'])" class="w-full py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-sm font-medium transition text-center block">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Repositories Section -->
+    <section id="github-repos" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-emerald-900/40">
+        <div class="flex flex-col md:flex-row items-center justify-between mb-8 gap-4">
+            <div>
+                <h2 class="text-3xl font-bold text-white mb-2">📦 Live GitHub Repositories</h2>
+                <p class="text-emerald-300/80 text-sm">Directly connected repository feed via GitHub REST API.</p>
+            </div>
+            <div class="w-full md:w-72">
+                <input type="text" id="repo-search" placeholder="Search repositories..." onkeyup="filterRepos()" class="w-full bg-emerald-900/30 border border-emerald-800 rounded-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-emerald-500 transition">
+            </div>
+        </div>
+
+        <div id="repos-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Dynamic Repos Loaded via JS -->
+            <div class="bg-emerald-900/20 border border-emerald-800/40 rounded-xl p-6 animate-pulse">
+                <div class="h-5 bg-emerald-800/50 rounded w-3/4 mb-3"></div>
+                <div class="h-4 bg-emerald-800/30 rounded w-full mb-2"></div>
+                <div class="h-4 bg-emerald-800/30 rounded w-1/2"></div>
+            </div>
+            <div class="bg-emerald-900/20 border border-emerald-800/40 rounded-xl p-6 animate-pulse">
+                <div class="h-5 bg-emerald-800/50 rounded w-3/4 mb-3"></div>
+                <div class="h-4 bg-emerald-800/30 rounded w-full mb-2"></div>
+                <div class="h-4 bg-emerald-800/30 rounded w-1/2"></div>
+            </div>
+            <div class="bg-emerald-900/20 border border-emerald-800/40 rounded-xl p-6 animate-pulse">
+                <div class="h-5 bg-emerald-800/50 rounded w-3/4 mb-3"></div>
+                <div class="h-4 bg-emerald-800/30 rounded w-full mb-2"></div>
+                <div class="h-4 bg-emerald-800/30 rounded w-1/2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-emerald-900/40">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-white mb-3">🛠️ Technical Skills</h2>
+            <p class="text-emerald-300/80">Programming languages, web technologies, and embedded engineering tools.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-emerald-900/20 border border-emerald-800/50 rounded-2xl p-6">
+                <h3 class="font-bold text-emerald-400 mb-4 flex items-center gap-2"><i class="fa-solid fa-code"></i> Languages</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-emerald-950 border border-emerald-900 px-3 py-1.5 rounded-lg text-xs font-medium text-emerald-200">C</span>
+                    <span class="bg-emerald-950 border border-emerald-900 px-3 py-1.5 rounded-lg text-xs font-medium text-emerald-200">C++</span>
+                    <span class="bg-emerald-950 border border-emerald-900 px-3 py-1.5 rounded-lg text-xs font-medium text-emerald-200">Java</span>
+                    <span class="bg-emerald-950 border border-emerald-900 px-3 py-1.5 rounded-lg text-xs font-medium text-emerald-200">JavaScript</span>
+                    <span class="bg-emerald-950 border border-emerald-900 px-3 py-1.5 rounded-lg text-xs font-medium text-emerald-200">Python</span>
+                    <span class="bg-emerald-950 border border-emerald-900 px-3 py-1.5 rounded-lg text-xs font-medium text-emerald-200">Dart</span>
+                </div>
+            </div>
+
+            <div class="bg-emerald-900/20 border border-emerald-800/50 rounded-2xl p-6">
+                <h3 class="font-bold text-emerald-400 mb-4 flex items-center gap-2"><i class="fa-solid fa-laptop-code"></i> Web & Mobile</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-emerald-950 border border-emerald-900 px-3 py-1.5 rounded-lg text-xs font-medium text-emerald-200">HTML / CSS</span>
+                    <span class="bg-emerald-950 border border-emerald-900 px-3 py-1.5 rounded-lg text-xs font-medium text-emerald-200">React</span>
+                    <span class="bg-emerald-950 border border-emerald-900 px-3 py-1.5 rounded-lg text-xs font-medium text-emerald-200">Node.js</span>
+                    <span class="bg-emerald-950 border border-emerald-900 px-3 py-1.5 rounded-lg text-xs font-medium text-emerald-200">Express</span>
+                    <span class="bg-emerald-950 border border-emerald-900 px-3 py-1.5 rounded-lg text-xs font-medium text-emerald-200">Flutter</span>
+                </div>
+            </div>
+
+            <div class="bg-emerald-900/20 border border-emerald-800/50 rounded-2xl p-6">
+                <h3 class="font-bold text-emerald-400 mb-4 flex items-center gap-2"><i class="fa-solid fa-database"></i> Databases</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-emerald-950 border border-emerald-900 px-3 py-1.5 rounded-lg text-xs font-medium text-emerald-200">MySQL</span>
+                    <span class="bg-emerald-950 border border-emerald-900 px-3 py-1.5 rounded-lg text-xs font-medium text-emerald-200">PostgreSQL</span>
+                    <span class="bg-emerald-950 border border-emerald-900 px-3 py-1.5 rounded-lg text-xs font-medium text-emerald-200">Firebase</span>
+                    <span class="bg-emerald-950 border border-emerald-900 px-3 py-1.5 rounded-lg text-xs font-medium text-emerald-200">SQLite</span>
+                </div>
+            </div>
+
+            <div class="bg-emerald-900/20 border border-emerald-800/50 rounded-2xl p-6">
+                <h3 class="font-bold text-emerald-400 mb-4 flex items-center gap-2"><i class="fa-solid fa-microchip"></i> Hardware & Tools</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-emerald-950 border border-emerald-900 px-3 py-1.5 rounded-lg text-xs font-medium text-emerald-200">Arduino / ESP32</span>
+                    <span class="bg-emerald-950 border border-emerald-900 px-3 py-1.5 rounded-lg text-xs font-medium text-emerald-200">AutoCAD / KiCad</span>
+                    <span class="bg-emerald-950 border border-emerald-900 px-3 py-1.5 rounded-lg text-xs font-medium text-emerald-200">MATLAB</span>
+                    <span class="bg-emerald-950 border border-emerald-900 px-3 py-1.5 rounded-lg text-xs font-medium text-emerald-200">Git / GitHub</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logic Gate Simulator Interactive Widget -->
+    <section id="simulator" class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-emerald-900/40">
+        <div class="bg-emerald-900/20 border border-emerald-800/50 rounded-2xl p-8 glow-box">
+            <div class="text-center mb-8">
+                <span class="code-font text-xs text-emerald-400 bg-emerald-900/40 px-3 py-1 rounded-full border border-emerald-800">Interactive Circuit Widget</span>
+                <h2 class="text-2xl font-bold text-white mt-3">⚡ Quick Logic Gate Simulator</h2>
+                <p class="text-emerald-300/80 text-sm mt-1">Test digital logic states for embedded systems prototyping.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center bg-emerald-950/60 p-6 rounded-xl border border-emerald-900/60 text-center">
+                <div class="space-y-3">
+                    <p class="code-font text-xs text-emerald-400 font-semibold">Inputs</p>
+                    <button onclick="toggleInput('A')" id="btn-a" class="w-20 py-3 rounded-xl code-font font-bold text-sm bg-emerald-900 border border-emerald-700 text-emerald-200 hover:bg-emerald-800 transition">A = 0</button>
+                    <button onclick="toggleInput('B')" id="btn-b" class="w-20 py-3 rounded-xl code-font font-bold text-sm bg-emerald-900 border border-emerald-700 text-emerald-200 hover:bg-emerald-800 transition">B = 0</button>
+                </div>
+
+                <div class="space-y-3">
+                    <p class="code-font text-xs text-emerald-400 font-semibold">Logic Gate</p>
+                    <select id="gate-select" onchange="computeLogic()" class="w-full bg-emerald-900/80 border border-emerald-700 rounded-xl px-4 py-3 code-font text-sm text-white focus:outline-none">
+                        <option value="AND">AND</option>
+                        <option value="OR">OR</option>
+                        <option value="XOR">XOR</option>
+                        <option value="NAND">NAND</option>
+                        <option value="NOR">NOR</option>
+                    </select>
+                </div>
+
+                <div class="space-y-3">
+                    <p class="code-font text-xs text-emerald-400 font-semibold">Output (LED)</p>
+                    <div id="output-led" class="w-16 h-16 mx-auto rounded-full bg-red-900 border-2 border-red-600 flex items-center justify-center code-font font-bold text-white text-lg transition duration-300 shadow-[0_0_15px_rgba(239,68,68,0.3)]">
+                        0
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engineering Philosophy -->
+    <section class="py-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-emerald-900/40">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold text-white mb-2">💡 Engineering Philosophy</h2>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="border-b border-emerald-800/60 text-emerald-400 code-font text-sm">
+                        <th class="py-3 px-4">Core Principle</th>
+                        <th class="py-3 px-4">My Approach</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-emerald-900/40 text-sm">
+                    <tr>
+                        <td class="py-3 px-4 font-semibold text-white">💡 Innovation</td>
+                        <td class="py-3 px-4 text-emerald-200">Transform ideas into meaningful technological solutions</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4 font-semibold text-white">📚 Continuous Learning</td>
+                        <td class="py-3 px-4 text-emerald-200">Improve through research, experimentation, and practice</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4 font-semibold text-white">🛠️ Practical Engineering</td>
+                        <td class="py-3 px-4 text-emerald-200">Apply technical knowledge to real-world challenges</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4 font-semibold text-white">🤝 Collaboration</td>
+                        <td class="py-3 px-4 text-emerald-200">Learn and develop through teamwork</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4 font-semibold text-white">✨ Quality</td>
+                        <td class="py-3 px-4 text-emerald-200">Build organized and maintainable systems</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4 font-semibold text-white">📈 Growth</td>
+                        <td class="py-3 px-4 text-emerald-200">Continuously explore new technologies and opportunities</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-emerald-900/40 text-center">
+        <h2 class="text-3xl font-bold text-white mb-3">📬 Let's Connect</h2>
+        <p class="text-emerald-300/80 mb-8">I'm interested in learning new technologies, exploring engineering projects, and collaborating with people who share a passion for innovation.</p>
+
+        <div class="flex justify-center gap-4 mb-8">
+            <a href="mailto:YOUR_EMAIL" class="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-sm font-semibold transition flex items-center gap-2">
+                <i class="fa-solid fa-envelope"></i> Email Me
+            </a>
+            <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" class="px-6 py-3 bg-emerald-900/60 border border-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-sm font-semibold transition flex items-center gap-2">
+                <i class="fa-brands fa-github"></i> GitHub Profile
+            </a>
+        </div>
+
+        <div class="bg-emerald-950 border border-emerald-900 rounded-xl p-6 max-w-lg mx-auto code-font text-emerald-400 text-xs shadow-inner">
+            <p class="text-emerald-500">// Engineering automation loop</p>
+            <p>while (learning) {</p>
+            <p class="pl-4">create();</p>
+            <p class="pl-4">test();</p>
+            <p class="pl-4">improve();</p>
+            <p>}</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-emerald-900/50 py-8 text-center text-xs text-emerald-400/80 code-font">
+        <p class="mb-2">Thank you for visiting my portfolio!</p>
+        <p>Designed with creativity. Developed with curiosity. Driven by engineering.</p>
+        <div class="mt-4">
+            <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:061410,50:124535,100:29B987&height=120&section=footer" alt="Footer Wave"/>
+        </div>
+    </footer>
+
+    <!-- Project Modal Popup -->
+    <div id="project-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm hidden p-4">
+        <div class="bg-emerald-950 border border-emerald-800 rounded-2xl max-w-lg w-full p-6 relative glow-box">
+            <button onclick="closeProjectModal()" class="absolute top-4 right-4 text-emerald-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 id="modal-title" class="text-xl font-bold text-white mb-1"></h3>
+            <p id="modal-subtitle" class="text-emerald-400 text-sm font-medium mb-4"></p>
+            <div id="modal-desc" class="text-emerald-100/90 text-sm space-y-3 mb-6 whitespace-pre-line"></div>
+            <div id="modal-techs" class="flex flex-wrap gap-2 pt-4 border-t border-emerald-900"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript for GitHub API & Widgets -->
+    <script>
+        // Fetch GitHub Repositories
+        async function fetchGitHubRepos() {
+            const container = document.getElementById('repos-container');
+            const username = 'YOUR_GITHUB_USERNAME';
+            try {
+                const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=6`);
+                if (!response.ok) throw new Error('Failed to fetch repositories');
+                const repos = await response.json();
+                
+                window.allRepos = repos;
+                displayRepos(repos);
+            } catch (error) {
+                container.innerHTML = `
+                    <div class="col-span-full text-center py-8 text-emerald-400/80 bg-emerald-900/10 border border-emerald-900/40 rounded-xl">
+                        <p>Repositories loaded via dynamic API placeholder or username pending configuration.</p>
+                        <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" class="mt-3 inline-block px-4 py-2 bg-emerald-600 text-white rounded-lg text-xs font-semibold hover:bg-emerald-500 transition">View GitHub Profile Directly</a>
+                    </div>
+                `;
+            }
+        }
+
+        function displayRepos(repos) {
+            const container = document.getElementById('repos-container');
+            if (repos.length === 0) {
+                container.innerHTML = '<p class="col-span-full text-center text-emerald-400">No repositories found.</p>';
+                return;
+            }
+            container.innerHTML = repos.map(repo => `
+                <div class="bg-emerald-900/20 border border-emerald-800/50 rounded-xl p-6 flex flex-col justify-between glow-box transition hover:-translate-y-1">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="font-bold text-white text-base truncate flex items-center gap-2">
+                                <i class="fa-solid fa-book-bookmark text-emerald-400 text-sm"></i> ${repo.name}
+                            </h3>
+                            <span class="text-[10px] bg-emerald-950 border border-emerald-800 px-2 py-0.5 rounded text-emerald-300 code-font">${repo.language || 'Code'}</span>
+                        </div>
+                        <p class="text-emerald-100/70 text-xs mb-4 line-clamp-2">${repo.description || 'No description available for this repository.'}</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-emerald-900/40 text-xs text-emerald-300">
+                        <div class="flex items-center gap-3">
+                            <span><i class="fa-regular fa-star text-emerald-400"></i> ${repo.stargazers_count}</span>
+                            <span><i class="fa-solid fa-code-fork text-emerald-400"></i> ${repo.forks_count}</span>
+                        </div>
+                        <a href="${repo.html_url}" target="_blank" class="text-emerald-400 hover:text-white font-medium flex items-center gap-1 transition">
+                            Code <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterRepos() {
+            const query = document.getElementById('repo-search').value.toLowerCase();
+            if (!window.allRepos) return;
+            const filtered = window.allRepos.filter(repo => repo.name.toLowerCase().includes(query) || (repo.description && repo.description.toLowerCase().includes(query)));
+            displayRepos(filtered);
+        }
+
+        // Project Modal Functions
+        function openProjectModal(title, subtitle, desc, techs) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-subtitle').innerText = subtitle;
+            document.getElementById('modal-desc').innerText = desc;
+            document.getElementById('modal-techs').innerHTML = techs.map(t => `<span class="bg-emerald-900/50 border border-emerald-700 px-2.5 py-1 rounded-lg text-xs text-emerald-200">${t}</span>`).join('');
+            document.getElementById('project-modal').classList.remove('hidden');
+        }
+
+        function closeProjectModal() {
+            document.getElementById('project-modal').classList.add('hidden');
+        }
+
+        // Logic Gate Simulator Widget
+        let inputA = 0;
+        let inputB = 0;
+
+        function toggleInput(which) {
+            if (which === 'A') {
+                inputA = inputA === 0 ? 1 : 0;
+                const btn = document.getElementById('btn-a');
+                btn.innerText = `A = ${inputA}`;
+                btn.className = `w-20 py-3 rounded-xl code-font font-bold text-sm transition ${inputA === 1 ? 'bg-emerald-600 border border-emerald-400 text-white shadow-[0_0_10px_rgba(41,185,135,0.4)]' : 'bg-emerald-900 border border-emerald-700 text-emerald-200'}`;
+            } else {
+                inputB = inputB === 0 ? 1 : 0;
+                const btn = document.getElementById('btn-b');
+                btn.innerText = `B = ${inputB}`;
+                btn.className = `w-20 py-3 rounded-xl code-font font-bold text-sm transition ${inputB === 1 ? 'bg-emerald-600 border border-emerald-400 text-white shadow-[0_0_10px_rgba(41,185,135,0.4)]' : 'bg-emerald-900 border border-emerald-700 text-emerald-200'}`;
+            }
+            computeLogic();
+        }
+
+        function computeLogic() {
+            const gate = document.getElementById('gate-select').value;
+            let result = 0;
+            switch(gate) {
+                case 'AND': result = (inputA && inputB) ? 1 : 0; break;
+                case 'OR': result = (inputA || inputB) ? 1 : 0; break;
+                case 'XOR': result = (inputA !== inputB) ? 1 : 0; break;
+                case 'NAND': result = (!(inputA && inputB)) ? 1 : 0; break;
+                case 'NOR': result = (!(inputA || inputB)) ? 1 : 0; break;
+            }
+            const led = document.getElementById('output-led');
+            led.innerText = result;
+            if (result === 1) {
+                led.className = "w-16 h-16 mx-auto rounded-full bg-emerald-500 border-2 border-emerald-300 flex items-center justify-center code-font font-bold text-white text-lg transition duration-300 shadow-[0_0_20px_rgba(41,185,135,0.8)]";
+            } else {
+                led.className = "w-16 h-16 mx-auto rounded-full bg-red-900 border-2 border-red-600 flex items-center justify-center code-font font-bold text-white text-lg transition duration-300 shadow-[0_0_15px_rgba(239,68,68,0.3)]";
+            }
+        }
+
+        // Initialize on load
+        window.addEventListener('DOMContentLoaded', () => {
+            fetchGitHubRepos();
+        });
+    </script>
+</body>
+</html>

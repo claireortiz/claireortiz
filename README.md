@@ -1,4 +1,45 @@
 ## Hi there 👋
+
+<!--
+=====================================================
+ CLAIRE ORTIZ | GITHUB PROFILE PORTFOLIO
+ Theme: Midnight Emerald
+ Replace YOUR_GITHUB_USERNAME, YOUR_EMAIL,
+ and YOUR_PORTFOLIO_URL with your own details.
+=====================================================
+-->
+
+<div align="center">
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=230&color=0:061410,45:124535,100:29B987&text=CLAIRE%20ORTIZ&fontColor=FFFFFF&fontSize=52&fontAlignY=38&desc=COMPUTER%20ENGINEERING%20%7C%20TECHNOLOGY%20INNOVATION&descSize=15&descAlignY=59&animation=fadeIn" alt="Claire Ortiz Portfolio Banner"/>
+
+<br/>
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=21&duration=3000&pause=1000&color=3DDC97&center=true&vCenter=true&width=650&lines=Computer+Engineering+Student;Aspiring+Software+Developer;Embedded+Systems+Enthusiast;IoT+%26+Automation+Explorer;Engineering+Ideas+Into+Reality" alt="Animated Introduction"/>
+
+<br/>
+
+<a href="https://github.com/YOUR_GITHUB_USERNAME">
+<img src="https://img.shields.io/badge/GITHUB-07120F?style=for-the-badge&logo=github&logoColor=3DDC97" alt="GitHub"/>
+</a>
+
+<a href="YOUR_PORTFOLIO_URL">
+<img src="https://img.shields.io/badge/PORTFOLIO-10392F?style=for-the-badge&logo=googlechrome&logoColor=3DDC97" alt="Portfolio"/>
+</a>
+
+<a href="mailto:YOUR_EMAIL">
+<img src="https://img.shields.io/badge/CONTACT-07120F?style=for-the-badge&logo=gmail&logoColor=3DDC97" alt="Email"/>
+</a>
+
+<br/><br/>
+
+### SOFTWARE DEVELOPMENT • EMBEDDED SYSTEMS • NETWORK ENGINEERING
+
+*Designing Solutions. Developing Technology. Engineering the Future.*
+
+</div>
+
+
 # 🚀 Featured Projects
 
 A collection of software applications, engineering prototypes, and technical design projects.
